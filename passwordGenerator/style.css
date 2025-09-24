@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.container .card input[type="checkbox"] {
+  height: 1.2rem;
+  width: 1.2rem;
+  accent-color: #212121;
+}
+
+.container .card input[type="number"] {
+  height: 2rem;
+  width: 4rem;
+  padding: 2px;
+  accent-color: #212121;
+}
+#copyInput:focus {
+  outline: none;
+}
+#copyInput[type="text"] {
+  border: none;
+  height: 2rem;
+  width: 10rem;
+  padding: 2px 5px;
+  color: #212121;
+}

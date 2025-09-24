@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: #212121;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container span{
+    font-size: 6rem;
+    letter-spacing: .5rem;
+    color: aqua;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.container span.active{
+    animation: jump 2s ease-in-out;
+}
+
+@keyframes jump {
+    0%{
+        transform: translate(0,0) rotate(180deg);
+    }
+    100%{
+        transform: scale(2.5) translate(0,-11rem);
+    }
+}

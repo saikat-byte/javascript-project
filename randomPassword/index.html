@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Generator - Bootstrap Template</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card card-password">
+        <div class="card-header card-header-gradient d-flex align-items-center justify-content-between">
+            <div>
+                <span class="logo-dot"></span>
+                <strong>SecurePass</strong>
+                <div class="muted-small" style="opacity:0.95;font-weight:500">Simple password generator</div>
+            </div>
+            <div class="text-end">
+                <small style="opacity:0.9">v1.0</small>
+            </div>
+        </div>
+
+        <div class="card-body p-4">
+            <div class="mb-3">
+                <label for="passwordOutput" class="form-label">Generated Password</label>
+                <div class="input-group shadow-sm">
+                    <input id="passwordOutput" type="text" class="form-control form-control-lg" placeholder="Click "
+                        Password Generate" to create" readonly>
+                    <button id="copyBtn" onclick="copyPassword()" class="btn btn-outline-secondary copy-btn" title="Copy password">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+                <div class="form-text mt-2 muted-small">Click the copy icon to copy to clipboard.</div>
+            </div>
+
+            <div class="d-flex gap-2 align-items-center mb-3">
+                <label class="mb-0 me-2">Length:</label>
+                <input id="lenRange" type="range" class="form-range" min="6" max="32" value="16" style="flex:1;">
+                <div id="lenValue" class="ms-2" style="min-width:36px;font-weight:600">16</div>
+            </div>
+
+            <div class="mb-3">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="incLower" checked>
+                    <label class="form-check-label muted-small" for="incLower">lowercase</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="incUpper" checked>
+                    <label class="form-check-label muted-small" for="incUpper">UPPERCASE</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="incNumber" checked>
+                    <label class="form-check-label muted-small" for="incNumber">numbers</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="incSymbol" checked>
+                    <label class="form-check-label muted-small" for="incSymbol">symbols</label>
+                </div>
+            </div>
+
+            <div class="d-grid">
+                <button id="generateBtn" onclick="createPassword()" class="btn btn-lg btn-primary">Password Generate</button>
+            </div>
+
+        </div>
+
+        <div class="card-footer text-center py-3 muted-small">Designed by ❤️ Saikat Golder</div>
+    </div>
+
+    <!-- Bootstrap JS (optional for some components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
